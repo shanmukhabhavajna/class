@@ -55,7 +55,7 @@ plt.figure(figsize=(8, 6))
 
 plt.plot(x, y1, label="2x + 3y = 6")
 plt.plot(x, y_k2, label="4x + 6y = 6 (k=2)")
-plt.plot(x, y_k4, label="4x + 6y = 12 (k=4)")
+plt.plot(x, y_k4,'--' ,label="4x + 6y = 12 (k=4)")
 
 plt.xlabel("x")
 plt.ylabel("y")
