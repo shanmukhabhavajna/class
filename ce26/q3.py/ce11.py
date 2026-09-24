@@ -1,34 +1,38 @@
 import numpy as np
 
+# Define the matrix P
 P = np.array([
     [1, 0, 1],
     [0, 1, 0],
     [1, 0, 1]
 ])
 
-# Eigenvalues
-eigenvalues = np.linalg.eigvals(P)
-
 print("P =")
 print(P)
 
+# Find the eigenvalues of P
+eigenvalues = np.linalg.eigvals(P)
+
 print("\nEigenvalues =", eigenvalues)
 
-# A: Trace = sum of eigenvalues
+
+# ------------------------------------------------
+# A: Trace of P = Sum of eigenvalues
+# ------------------------------------------------
+
+# Trace is the sum of diagonal elements
 trace = np.trace(P)
+
+# Calculate the sum of all eigenvalues
 sum_eigenvalues = np.sum(eigenvalues)
 
 print("\nA:")
 print("Trace =", trace)
 print("Sum of eigenvalues =", sum_eigenvalues)
+
+# Check whether both are equal
 print("A is", np.isclose(trace, sum_eigenvalues))
 
-# B: P^T P = I
-PTP = P.T @ P
 
-print("\nB:")
-print("P^T P =")
-print(PTP)
-print("B is", np.array_equal(PTP, np.eye(3)))
-
-#
+# ------------------------------------------------
+# B: P^
